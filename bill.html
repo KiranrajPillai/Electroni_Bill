@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Store Billing</title>
+    <link rel="stylesheet" href="bill.css">
+
+    </head>
+<body>
+    <div class="img">
+        <img src="kiranLogo.jpg" alt="error">
+    </div>
+    <form action="connect.php" method="post" id="form">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="part1">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    Full Name: <input type="text" id="name" name="name1"> <br>
+    
+                    Your Email: <input type="text" id="email" name="email"><br>
+
+                    Contact No.: <input type="text" id="contactNumber" name="contactNumber">
+
+                </fieldset>
+            </div>
+
+            <div class="part2">
+                <fieldset>
+                    <legend>Your Orders</legend>
+                    IPhone 13ProMax(256GBG)(Rs.1,39,900/-): <input type="text" id="iPhone" name="Menu" ><br>
+                    One Plus 9 Pro 5G(256GB)(Rs.69,999/-): <input type="text" id="onePlus" name="Price"><br>
+                    Samsung Galaxy S21(256gb)(Rs.1,05,999/-): <input type="text" id="samsung" name="Quantity"><br>
+                    Sony Bravia TV(65inch)(4K)(Rs.1,01,490/-): <input type="text" id="sony" name="Amount"><br>
+                    Samsung Crystal 4KPro TV(65inch)(Rs.89,990/-): <input type="text" id="samsaungTV" name="samsung"><br>
+                    
+                </fieldset>
+            </div> 
+        </div>
+        
+    
+        <div class="container">
+            <fieldset>
+                <legend>Your Bill</legend>
+                <h3>Your Name:<span id="name2"></span></h3>
+                <h3>Email: <span id="email2"></span></h3>
+                <h3>Contact No.: <span id="contactNumber2"></span></h3>
+                <table border="1">
+                    <thead>
+                        <tr><th >Menu</th><th >Price</th><th >Quantity</th><th >Amount</th></tr>
+                    </thead>
+                    <tbody id="bill">
+                    </tbody>
+                </table>
+             </fieldset>
+
+                <h1>Total Amout: Rs. <span id="amount">0</span></h1>          
+        </div>
+    </div>
+    <input type="submit" class="button" value="Submit" onclick="saveData()" />
+    </form>
+<script src="bill.js"></script>
+ </body>
+</html>
